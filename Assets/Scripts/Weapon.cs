@@ -1,11 +1,13 @@
 using StarterAssets;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     StarterAssetsInputs starterAssetsInputs;
+    [SerializeField] WeaponSO weaponSO;
+    [SerializeField] GameObject hitVFXPrefab;
     [SerializeField] ParticleSystem muzzleFlash;
-    [SerializeField] int damageAmount = 1;
     [SerializeField] Animator animator;
     const string SHOOT_STRING = "Shoot";
     void Awake()
@@ -27,7 +29,8 @@ public class Weapon : MonoBehaviour
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
         {
             EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
-            enemyHealth?.TakeDamage(damageAmount);
+            enemyHealth?.TakeDamage(weaponSO.Damage);
+            Instantiate(hitVFXPrefab, hit.point, Quaternion.identity);
         }
     }
 }

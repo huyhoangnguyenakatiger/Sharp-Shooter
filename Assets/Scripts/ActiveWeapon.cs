@@ -25,6 +25,7 @@ public class ActiveWeapon : MonoBehaviour
     {
         timeSinceLastShot += Time.deltaTime;
         HandleShoot();
+        HandleZoom();
     }
 
     private void HandleShoot()
@@ -50,6 +51,15 @@ public class ActiveWeapon : MonoBehaviour
             Weapon newWeapon = Instantiate(weaponSO.Prefab, this.transform).GetComponent<Weapon>();
             currentWeapon = newWeapon;
             this.weaponSO = weaponSO;
+        }
+    }
+
+    public void HandleZoom()
+    {
+        if (!weaponSO.CanZoom) return;
+        if (starterAssetsInputs.zoom)
+        {
+            Debug.Log("Zooming");
         }
     }
 }

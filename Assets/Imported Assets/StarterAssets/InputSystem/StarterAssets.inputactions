@@ -252,7 +252,7 @@
                     "name": "",
                     "id": "b78d86da-9a81-4254-bd77-30fc8fb60933",
                     "path": "<Mouse>/rightButton",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "Zoom",

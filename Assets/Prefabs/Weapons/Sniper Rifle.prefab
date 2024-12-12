@@ -4913,6 +4913,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzleFlash: {fileID: 8124111161004826383}
+  interactionLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &8396159611601176574
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7281640200891067770}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6489009283470237704}
   - component: {fileID: 8124111161004826383}
   - component: {fileID: 971984666628832160}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Muzzle Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4876,7 +4876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3696687453878095068}
   - component: {fileID: 7964414239919042669}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Sniper Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4927,7 +4927,7 @@ GameObject:
   - component: {fileID: 2257733786877624647}
   - component: {fileID: 1247776614423694427}
   - component: {fileID: 8216309877922148979}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sniper_01_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}

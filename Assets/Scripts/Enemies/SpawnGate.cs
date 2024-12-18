@@ -7,7 +7,7 @@ public class SpawnGate : MonoBehaviour
 {
     [SerializeField] GameObject robot;
     [SerializeField] float timeToSpawnEnemy = 5f;
-    [SerializeField] FirstPersonController player;
+    [SerializeField] PlayerHealth player;
     void Start()
     {
         StartCoroutine(SpawnEnemyCoroutine());

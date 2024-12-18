@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera deathVirtualCamera;
     [SerializeField] Transform weaponCamera;
     [SerializeField] Image[] shieldBars;
-    int currentHealth;
+    public int currentHealth;
     void Awake()
     {
         currentHealth = startingHealth;

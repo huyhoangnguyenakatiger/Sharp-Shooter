@@ -27,6 +27,7 @@ namespace StarterAssets
 			SetCursorState(true);
 		}
 
+
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
 		{

@@ -23,7 +23,6 @@ public class Projectile : MonoBehaviour
     public void Init(int damage)
     {
         this.damage = damage;
-        Debug.Log("Projectile initialized with damage: " + damage);
     }
 
     void OnTriggerEnter(Collider other)

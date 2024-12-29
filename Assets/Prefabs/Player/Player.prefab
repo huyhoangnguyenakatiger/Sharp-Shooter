@@ -416,6 +416,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  gameOverContainer: {fileID: 0}
   currentHealth: 0
 --- !u!1 &2893602624721341359
 GameObject:
@@ -507,7 +508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &868579504521580511
 Transform:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class ActiveWeapon : MonoBehaviour
     Animator animator;
     StarterAssetsInputs starterAssetsInputs;
     FirstPersonController firstPersonController;
+    AudioSource audioSource;
 
 
     float defaultFOV;
@@ -36,7 +37,7 @@ public class ActiveWeapon : MonoBehaviour
         defaultFOV = cinemachineVirtualCamera.m_Lens.FieldOfView;
         defaultWeaponFOV = weaponCamera.fieldOfView;
         defaultRotationSpeed = firstPersonController.RotationSpeed;
-        // currentWeapon = GetComponentInChildren<Weapon>();
+        audioSource = GetComponent<AudioSource>();
 
     }
     void Start()
@@ -57,6 +58,10 @@ public class ActiveWeapon : MonoBehaviour
         if (!starterAssetsInputs.shoot) return;
         if (timeSinceLastShot >= currentWeaponSO.FireRate && currentAmmo > 0)
         {
+            if (audioSource.clip != null)
+            {
+                audioSource.Play();
+            }
             animator.Play(SHOOT_STRING, 0, 0f);
             currentWeapon.Shoot(currentWeaponSO);
             timeSinceLastShot = 0f;
@@ -76,6 +81,10 @@ public class ActiveWeapon : MonoBehaviour
         Weapon newWeapon = Instantiate(weaponSO.Prefab, this.transform).GetComponent<Weapon>();
         currentWeapon = newWeapon;
         this.currentWeaponSO = weaponSO;
+        if (weaponSO.ShootingAudio != null)
+        {
+            audioSource.clip = weaponSO.ShootingAudio;
+        }
         AdjustAmmo(weaponSO.MagazineSize);
     }
 
